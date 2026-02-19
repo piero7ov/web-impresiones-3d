@@ -1,0 +1,243 @@
+<?php
+/**
+ * LISTADO DE COMPRAS: compras.php
+ * Finalidad: Mostrar todas las compras realizadas, permitir filtrado y búsqueda.
+ */
+
+declare(strict_types=1);
+
+require_once __DIR__ . "/inc/auth.php";
+require_admin();
+
+if (!function_exists("h")) {
+  function h($s): string { return htmlspecialchars((string)$s, ENT_QUOTES, "UTF-8"); }
+}
+
+function load_json_list(string $path, array $possibleKeys = ["compras","orders","items"]): array {
+  if (!file_exists($path)) return [[], "Lo sentimos, no se encontró el conjunto de datos deseado."];
+
+  $raw = file_get_contents($path);
+  if ($raw === false) return [[], "Error al leer los datos."];
+
+  $data = json_decode($raw, true);
+  if ($data === null && json_last_error() !== JSON_ERROR_NONE) {
+    return [[], "Error de formato en los datos recibidos."];
+  }
+
+  // Caso A: array directo []
+  if (is_array($data) && array_keys($data) === range(0, count($data) - 1)) {
+    return [$data, ""];
+  }
+
+  // Caso B: objeto con keys típicas
+  if (is_array($data)) {
+    foreach ($possibleKeys as $k) {
+      if (isset($data[$k]) && is_array($data[$k])) return [$data[$k], ""];
+    }
+  }
+
+  return [[], "El JSON no tiene el formato esperado (array o keys: compras/orders/items)."];
+}
+
+function get_field(array $row, array $paths, $default = "") {
+  foreach ($paths as $p) {
+    $parts = explode(".", $p);
+    $cur = $row;
+    $ok = true;
+
+    foreach ($parts as $part) {
+      if (!is_array($cur) || !array_key_exists($part, $cur)) { $ok = false; break; }
+      $cur = $cur[$part];
+    }
+
+    if ($ok) return $cur;
+  }
+  return $default;
+}
+
+function to_ts(string $iso): int {
+  $t = strtotime($iso);
+  return $t !== false ? $t : 0;
+}
+
+/**
+ * Formatea un valor numérico como moneda (sin el símbolo).
+ */
+function fmt_money($v): string {
+  if (is_numeric($v)) return number_format((float)$v, 2, ".", "");
+  return (string)$v;
+}
+
+/**
+ * Devuelve la clase CSS correspondiente al estado del pedido para el estilo de la píldora.
+ */
+function status_class(string $estado): string {
+  $e = mb_strtolower(trim($estado), "UTF-8");
+  if ($e === "pendiente") return "status-pendiente";
+  if ($e === "en proceso") return "status-proceso";
+  if ($e === "completado") return "status-completado";
+  if ($e === "cancelado") return "status-cancelado";
+  return "status-pendiente";
+}
+
+/* =========================
+   Cargar compras reales
+   ========================= */
+$comprasPath = __DIR__ . "/../data/compras_ficticias.json";
+[$compras, $loadError] = load_json_list($comprasPath);
+
+/* =========================
+   Filtro
+   ========================= */
+$q = trim((string)($_GET["q"] ?? ""));
+$qLower = mb_strtolower($q, "UTF-8");
+
+if ($loadError === "" && $q !== "") {
+  $compras = array_values(array_filter($compras, function($c) use ($qLower){
+    $orderId = (string)get_field($c, ["order_id","id"], "");
+    $clienteId = (string)get_field($c, ["cliente_id","cliente.id"], "");
+    $clienteEmail = (string)get_field($c, ["cliente_email","cliente.email","email"], "");
+
+    // Tu JSON usa "compra": {...}
+    $productName = (string)get_field($c, [
+      "compra.product_name",
+      "product_name",
+      "producto.nombre",
+      "producto.name",
+      "product.nombre",
+      "product.name"
+    ], "");
+
+    $haystack = mb_strtolower($orderId . " " . $clienteId . " " . $clienteEmail . " " . $productName, "UTF-8");
+    return $haystack !== "" && mb_strpos($haystack, $qLower) !== false;
+  }));
+}
+
+/* =========================
+   Orden por fecha desc
+   ========================= */
+if ($loadError === "") {
+  usort($compras, function($a, $b){
+    $da = (string)get_field($a, ["created_at","created","fecha","date"], "");
+    $db = (string)get_field($b, ["created_at","created","fecha","date"], "");
+    return to_ts($db) <=> to_ts($da);
+  });
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Compras · Admin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../front/assets/styles.css">
+  <link rel="stylesheet" href="assets/admin.css">
+</head>
+
+<body>
+  <?php include 'inc/header.php'; ?>
+
+  <main class="admin">
+    <div class="admin-top">
+      <h2>Compras</h2>
+    </div>
+
+    <?php if ($loadError !== ""): ?>
+      <section class="admin-card">
+        <h3>Error</h3>
+        <p class="muted"><?php echo $loadError; ?></p>
+        <div class="admin-actions">
+          <a class="btn-admin-secondary" href="index.php">← Volver</a>
+        </div>
+      </section>
+    <?php else: ?>
+
+      <section class="admin-table-wrap">
+        <div class="admin-table-head">
+          <div>
+            <h3>Listado</h3>
+            <p><?php echo count($compras); ?> compra(s)</p>
+          </div>
+
+          <form class="filters" method="get" action="compras.php">
+            <input type="text" name="q" placeholder="Buscar por pedido / cliente / producto" value="<?php echo h($q); ?>">
+            <button class="btn-admin" type="submit">Buscar</button>
+            <a class="btn-admin-secondary" href="compras.php">Limpiar</a>
+          </form>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Pedido</th>
+              <th>Producto</th>
+              <th>Cliente</th>
+              <th>Qty</th>
+              <th>Color</th>
+              <th>Estado</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php if (empty($compras)): ?>
+              <tr>
+                <td colspan="9">No hay compras registradas todavía.</td>
+              </tr>
+            <?php else: ?>
+              <?php foreach ($compras as $c): ?>
+                <?php
+                  $orderId = (string)get_field($c, ["order_id","id"], "");
+                  $created = (string)get_field($c, ["created_at","created","fecha","date"], "");
+                  $clienteId = (string)get_field($c, ["cliente_id","cliente.id"], "");
+                  $clienteEmail = (string)get_field($c, ["cliente_email","cliente.email","email"], "");
+                  $clienteShow = $clienteId !== "" ? $clienteId : ($clienteEmail !== "" ? $clienteEmail : "—");
+
+                  // Tu JSON usa compra.*
+                  $productName = (string)get_field($c, [
+                    "compra.product_name",
+                    "product_name",
+                    "producto.nombre",
+                    "producto.name",
+                    "product.nombre",
+                    "product.name"
+                  ], "—");
+
+                  $qty = (int)get_field($c, ["compra.qty","qty"], 1);
+                  $color = (string)get_field($c, ["compra.color","color"], "—");
+
+                  $estado = (string)get_field($c, ["compra.estado","compra.status","estado","status"], "pendiente");
+                  $stClass = status_class($estado);
+
+                  $total = get_field($c, ["compra.total","total"], "");
+                ?>
+                <tr>
+                  <td><?php echo h($created !== "" ? $created : "—"); ?></td>
+                  <td><span class="kpill"><?php echo h($orderId !== "" ? $orderId : "—"); ?></span></td>
+                  <td><?php echo h($productName); ?></td>
+                  <td><?php echo h($clienteShow); ?></td>
+                  <td><?php echo h((string)$qty); ?></td>
+                  <td><?php echo h($color); ?></td>
+                  <td><span class="status-pill <?php echo h($stClass); ?>"><?php echo h($estado); ?></span></td>
+                  <td><strong><?php echo $total !== "" ? ("€ " . h(fmt_money($total))) : "—"; ?></strong></td>
+                  <td>
+                    <?php if ($orderId !== ""): ?>
+                      <a class="btn-admin-secondary" href="compra.php?order=<?php echo urlencode($orderId); ?>">Ver ficha</a>
+                    <?php else: ?>
+                      —
+                    <?php endif; ?>
+                  </td>
+                </tr>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          </tbody>
+        </table>
+      </section>
+
+    <?php endif; ?>
+  </main>
+
+  <?php include 'inc/footer.php'; ?>
+</body>
+</html>

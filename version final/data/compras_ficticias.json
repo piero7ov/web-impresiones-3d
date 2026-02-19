@@ -1,0 +1,199 @@
+[
+    {
+        "order_id": "20260218-050514-745141fc",
+        "created_at": "2026-02-18T05:05:14+00:00",
+        "cliente_id": "cli_fb9e03410b",
+        "compra": {
+            "product_slug": "base-compacta-petg",
+            "product_name": "Base compacta para auriculares",
+            "material": "PETG",
+            "tamano": "pequeño",
+            "categoria": "Oficina",
+            "precio_unit": "14.90",
+            "qty": 1,
+            "color": "blanco",
+            "total": "14.90"
+        },
+        "estado": "Completado",
+        "updated_at": "2026-02-19T16:35:50+00:00"
+    },
+    {
+        "order_id": "20260219-151552-5a0f34fc",
+        "created_at": "2026-02-19T15:15:52+00:00",
+        "cliente_id": "cli_ffce181c53",
+        "compra": {
+            "product_slug": "mascota-poligonal-decorativa",
+            "product_name": "Mascota poligonal decorativa",
+            "material": "PLA",
+            "tamano": "pequeño",
+            "categoria": "Figuras",
+            "precio_unit": "18.50",
+            "qty": 1,
+            "color": "blanco",
+            "total": "18.50"
+        }
+    },
+    {
+        "order_id": "20260219-153856-31e84a56",
+        "created_at": "2026-02-19T15:38:56+00:00",
+        "cliente_id": "cli_624106b4bd",
+        "compra": {
+            "product_slug": "base-compacta-petg",
+            "product_name": "Base compacta para auriculares",
+            "material": "PETG",
+            "tamano": "pequeño",
+            "categoria": "Oficina",
+            "precio_unit": "14.90",
+            "qty": 2,
+            "color": "negro",
+            "total": "29.80",
+            "estado": "cancelado"
+        }
+    },
+    {
+        "order_id": "20260219-153942-0559e3dd",
+        "created_at": "2026-02-19T15:39:42+00:00",
+        "cliente_id": "cli_2e8288dd79",
+        "compra": {
+            "product_slug": "placa-de-nombre-para-escritorio",
+            "product_name": "Placa de nombre para escritorio",
+            "material": "PLA",
+            "tamano": "mediano",
+            "categoria": "Personalizado",
+            "precio_unit": "15.00",
+            "qty": 3,
+            "color": "blanco",
+            "total": "45.00",
+            "estado": "en proceso"
+        }
+    },
+    {
+        "order_id": "20260219-173223-73c5f916",
+        "created_at": "2026-02-19T17:32:23+00:00",
+        "cliente_id": "cli_6b566f0de9",
+        "compra": {
+            "product_slug": "miniatura-de-personaje-gamer",
+            "product_name": "Miniatura de personaje gamer",
+            "material": "Resina",
+            "tamano": "mediano",
+            "categoria": "Figuras",
+            "precio_unit": "22.00",
+            "qty": 1,
+            "color": "negro",
+            "total": "22.00"
+        }
+    },
+    {
+        "order_id": "20260219-181518-57805979",
+        "created_at": "2026-02-19T18:15:18+00:00",
+        "cliente_id": "cli_a437281c2d",
+        "compra": {
+            "product_slug": "soporte-para-movil-personalizado",
+            "product_name": "Soporte para móvil con nombre",
+            "material": "PETG",
+            "tamano": "pequeño",
+            "categoria": "Personalizado",
+            "precio_unit": "12.90",
+            "qty": 3,
+            "color": "blanco",
+            "total": "38.70"
+        }
+    },
+    {
+        "order_id": "20260219-181545-e5894d52",
+        "created_at": "2026-02-19T18:15:45+00:00",
+        "cliente_id": "cli_a437281c2d",
+        "compra": {
+            "product_slug": "soporte-para-movil-personalizado",
+            "product_name": "Soporte para móvil con nombre",
+            "material": "PETG",
+            "tamano": "pequeño",
+            "categoria": "Personalizado",
+            "precio_unit": "12.90",
+            "qty": 3,
+            "color": "blanco",
+            "total": "38.70",
+            "estado": "en proceso"
+        }
+    },
+    {
+        "order_id": "20260219-181855-ae6749b0",
+        "created_at": "2026-02-19T18:18:55+00:00",
+        "cliente_id": "cli_0908f90ab3",
+        "compra": {
+            "product_slug": "organizador-modular-de-escritorio",
+            "product_name": "Organizador modular de escritorio",
+            "material": "PLA",
+            "tamano": "mediano",
+            "categoria": "Oficina",
+            "precio_unit": "19.90",
+            "qty": 1,
+            "color": "negro",
+            "total": "19.90"
+        }
+    },
+    {
+        "order_id": "20260219-182629-fa7bd501",
+        "created_at": "2026-02-19T18:26:29+00:00",
+        "cliente_id": "cli_8c48ec8fe1",
+        "compra": {
+            "product_slug": "busto-personalizado-estilo-low-poly",
+            "product_name": "Busto personalizado estilo low-poly",
+            "material": "Resina",
+            "tamano": "grande",
+            "categoria": "Figuras",
+            "precio_unit": "29.90",
+            "qty": 2,
+            "color": "blanco",
+            "total": "59.80"
+        }
+    },
+    {
+        "order_id": "20260219-182958-84a849e1",
+        "created_at": "2026-02-19T18:29:58+00:00",
+        "cliente_id": "cli_52d788fe69",
+        "compra": {
+            "product_slug": "llavero-personalizado-nickname",
+            "product_name": "Llavero personalizado con nickname",
+            "material": "PLA",
+            "tamano": "pequeño",
+            "categoria": "Personalizado",
+            "precio_unit": "7.50",
+            "qty": 1,
+            "color": "azul",
+            "total": "7.50"
+        }
+    },
+    {
+        "order_id": "20260219-183146-2a59d77f",
+        "created_at": "2026-02-19T18:31:46+00:00",
+        "cliente_id": "cli_553c65faa0",
+        "compra": {
+            "product_slug": "base-compacta-petg",
+            "product_name": "Base compacta para auriculares",
+            "material": "PETG",
+            "tamano": "pequeño",
+            "categoria": "Oficina",
+            "precio_unit": "14.90",
+            "qty": 1,
+            "color": "negro",
+            "total": "14.90"
+        }
+    },
+    {
+        "order_id": "20260219-184708-f51d9e19",
+        "created_at": "2026-02-19T18:47:08+00:00",
+        "cliente_id": "cli_f3518b6679",
+        "compra": {
+            "product_slug": "soporte-ergonomico-monitor",
+            "product_name": "Soporte ergonómico para monitor",
+            "material": "PLA",
+            "tamano": "grande",
+            "categoria": "Oficina",
+            "precio_unit": "24.90",
+            "qty": 1,
+            "color": "negro",
+            "total": "24.90"
+        }
+    }
+]
