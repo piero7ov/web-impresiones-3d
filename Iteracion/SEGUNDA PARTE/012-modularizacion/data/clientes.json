@@ -1,0 +1,112 @@
+[
+    {
+        "id": "cli_fb9e03410b",
+        "created_at": "2026-02-18T05:05:14+00:00",
+        "updated_at": "2026-02-18T05:05:14+00:00",
+        "nombre": "Piero",
+        "email": "piero7ov@gmail.com",
+        "telefono": "34567546",
+        "direccion": "Embarcadero 24 Pt 4",
+        "notas": "Que este bien empacado"
+    },
+    {
+        "id": "cli_ffce181c53",
+        "created_at": "2026-02-19T15:15:52+00:00",
+        "updated_at": "2026-02-19T15:15:52+00:00",
+        "nombre": "Andres Garcia",
+        "email": "andres@gmail.com",
+        "telefono": "345678",
+        "direccion": "Embarcadero 24 pt 5",
+        "notas": "Que el envio este bien empaquetado"
+    },
+    {
+        "id": "cli_624106b4bd",
+        "created_at": "2026-02-19T15:38:56+00:00",
+        "updated_at": "2026-02-19T15:38:56+00:00",
+        "nombre": "Alberto Garcia",
+        "email": "albertogarcia@gmail.com",
+        "telefono": "345678098",
+        "direccion": "Calle de Alberto",
+        "notas": "Nada"
+    },
+    {
+        "id": "cli_2e8288dd79",
+        "created_at": "2026-02-19T15:39:42+00:00",
+        "updated_at": "2026-02-19T15:39:42+00:00",
+        "nombre": "Maria Garcia",
+        "email": "mariag@gmail.com",
+        "telefono": "3456534213",
+        "direccion": "Calle de Maria",
+        "notas": "Nada"
+    },
+    {
+        "id": "cli_6b566f0de9",
+        "created_at": "2026-02-19T17:32:23+00:00",
+        "updated_at": "2026-02-19T17:32:23+00:00",
+        "nombre": "dasdasd",
+        "email": "adas@gmail.com",
+        "telefono": "33455345",
+        "direccion": "dasfdsgdsg",
+        "notas": "fdfdsfs"
+    },
+    {
+        "id": "cli_a437281c2d",
+        "created_at": "2026-02-19T18:15:18+00:00",
+        "updated_at": "2026-02-19T18:15:45+00:00",
+        "nombre": "erere",
+        "email": "erer@gmail.com",
+        "telefono": "2353254",
+        "direccion": "gsdfsdfds",
+        "notas": "gsdgfsf"
+    },
+    {
+        "id": "cli_0908f90ab3",
+        "created_at": "2026-02-19T18:18:55+00:00",
+        "updated_at": "2026-02-19T18:18:55+00:00",
+        "nombre": "esrtrrrte",
+        "email": "piero@gmail.com",
+        "telefono": "32434",
+        "direccion": "sadasdasd",
+        "notas": "asdasdas"
+    },
+    {
+        "id": "cli_8c48ec8fe1",
+        "created_at": "2026-02-19T18:26:29+00:00",
+        "updated_at": "2026-02-19T18:26:29+00:00",
+        "nombre": "Paco Martinez",
+        "email": "pacomartinez@paco.com",
+        "telefono": "235345643",
+        "direccion": "Calle de Paco",
+        "notas": "fdsfsfsdff"
+    },
+    {
+        "id": "cli_52d788fe69",
+        "created_at": "2026-02-19T18:29:58+00:00",
+        "updated_at": "2026-02-19T18:29:58+00:00",
+        "nombre": "prueba",
+        "email": "pieroprueba@gmail.com",
+        "telefono": "32543454",
+        "direccion": "calle prueba",
+        "notas": "fdsfdsfs"
+    },
+    {
+        "id": "cli_553c65faa0",
+        "created_at": "2026-02-19T18:31:46+00:00",
+        "updated_at": "2026-02-19T18:31:46+00:00",
+        "nombre": "sdasda",
+        "email": "asdasd@gmail.com",
+        "telefono": "324324",
+        "direccion": "asdasasd",
+        "notas": "dafasdas"
+    },
+    {
+        "id": "cli_f3518b6679",
+        "created_at": "2026-02-19T18:47:08+00:00",
+        "updated_at": "2026-02-19T18:47:08+00:00",
+        "nombre": "Paris",
+        "email": "paris@gmail.com",
+        "telefono": "3243441",
+        "direccion": "fdsfdsf1",
+        "notas": "1gdsgdgds"
+    }
+]
