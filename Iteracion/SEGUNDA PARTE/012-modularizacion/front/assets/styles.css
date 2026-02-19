@@ -1,0 +1,133 @@
+/* =========================
+    CSS BASE GLOBALES
+   ========================= */
+
+html,
+body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    background: #f3f4f6dc;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.search input {
+    padding: 8px 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 12px 0px;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #152a60, #0a70a0);
+    color: white;
+}
+
+/* -------- REJILLA BASE (COMPARTIDA) -------- */
+
+main {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* Tarjeta base */
+main article {
+    border: 1px solid #dddddd;
+    padding: 15px;
+    box-sizing: border-box;
+    flex: 1 1 100%;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+main article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+    border-color: #0ea5e9;
+}
+
+/* Imágenes base en tarjetas */
+main article img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto;
+    transition: transform 0.25s ease;
+}
+
+main article:hover img {
+    transform: scale(1.03);
+}
+
+/* Títulos y textos base */
+main article strong {
+    display: block;
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+}
+
+main article em {
+    display: block;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
