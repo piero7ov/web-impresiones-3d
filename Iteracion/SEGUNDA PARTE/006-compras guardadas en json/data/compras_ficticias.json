@@ -1,0 +1,18 @@
+[
+    {
+        "order_id": "20260218-050514-745141fc",
+        "created_at": "2026-02-18T05:05:14+00:00",
+        "cliente_id": "cli_fb9e03410b",
+        "compra": {
+            "product_slug": "base-compacta-petg",
+            "product_name": "Base compacta para auriculares",
+            "material": "PETG",
+            "tamano": "pequeño",
+            "categoria": "Oficina",
+            "precio_unit": "14.90",
+            "qty": 1,
+            "color": "blanco",
+            "total": "14.90"
+        }
+    }
+]
