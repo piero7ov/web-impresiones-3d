@@ -1,0 +1,66 @@
+[
+    {
+        "order_id": "20260218-050514-745141fc",
+        "created_at": "2026-02-18T05:05:14+00:00",
+        "cliente_id": "cli_fb9e03410b",
+        "compra": {
+            "product_slug": "base-compacta-petg",
+            "product_name": "Base compacta para auriculares",
+            "material": "PETG",
+            "tamano": "pequeño",
+            "categoria": "Oficina",
+            "precio_unit": "14.90",
+            "qty": 1,
+            "color": "blanco",
+            "total": "14.90"
+        }
+    },
+    {
+        "order_id": "20260219-151552-5a0f34fc",
+        "created_at": "2026-02-19T15:15:52+00:00",
+        "cliente_id": "cli_ffce181c53",
+        "compra": {
+            "product_slug": "mascota-poligonal-decorativa",
+            "product_name": "Mascota poligonal decorativa",
+            "material": "PLA",
+            "tamano": "pequeño",
+            "categoria": "Figuras",
+            "precio_unit": "18.50",
+            "qty": 1,
+            "color": "blanco",
+            "total": "18.50"
+        }
+    },
+    {
+        "order_id": "20260219-153856-31e84a56",
+        "created_at": "2026-02-19T15:38:56+00:00",
+        "cliente_id": "cli_624106b4bd",
+        "compra": {
+            "product_slug": "base-compacta-petg",
+            "product_name": "Base compacta para auriculares",
+            "material": "PETG",
+            "tamano": "pequeño",
+            "categoria": "Oficina",
+            "precio_unit": "14.90",
+            "qty": 2,
+            "color": "negro",
+            "total": "29.80"
+        }
+    },
+    {
+        "order_id": "20260219-153942-0559e3dd",
+        "created_at": "2026-02-19T15:39:42+00:00",
+        "cliente_id": "cli_2e8288dd79",
+        "compra": {
+            "product_slug": "placa-de-nombre-para-escritorio",
+            "product_name": "Placa de nombre para escritorio",
+            "material": "PLA",
+            "tamano": "mediano",
+            "categoria": "Personalizado",
+            "precio_unit": "15.00",
+            "qty": 3,
+            "color": "blanco",
+            "total": "45.00"
+        }
+    }
+]
