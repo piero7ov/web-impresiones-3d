@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nosotros lang="es" version="1.0">
+  <hero>
+    <titulo>Pierodev | Impresiones 3D</titulo>
+    <subtitulo>Diseñamos e imprimimos piezas útiles y personalizadas para tu escritorio, setup y decoración.</subtitulo>
+  </hero>
+
+  <bloques>
+    <bloque id="quienes-somos" titulo="Quiénes somos">
+      <p>Somos un taller creativo enfocado en impresión 3D: piezas de oficina, regalos personalizados y figuras decorativas.</p>
+      <p>Nos gusta mantener un diseño limpio, funcional y con buena presencia, cuidando el acabado y la precisión.</p>
+    </bloque>
+
+    <bloque id="como-trabajamos" titulo="Cómo trabajamos">
+      <pasos>
+        <paso>Eliges el producto (y si aplica, lo personalizas).</paso>
+        <paso>Confirmamos detalles: color, tamaño y cantidad.</paso>
+        <paso>Imprimimos, revisamos y hacemos acabado básico.</paso>
+        <paso>Entrega (en esta versión del proyecto es demostración).</paso>
+      </pasos>
+    </bloque>
+
+    <bloque id="materiales" titulo="Materiales">
+      <lista>
+        <item><b>PLA</b> — Ideal para piezas de oficina y decoración. Buen detalle y acabado.</item>
+        <item><b>PETG</b> — Más resistente. Recomendado para soportes y uso diario.</item>
+        <item><b>Resina</b> — Máximo detalle (figuras y bustos).</item>
+      </lista>
+    </bloque>
+
+    <bloque id="compromiso" titulo="Compromiso de calidad">
+      <lista>
+        <item>Revisión visual antes de entregar.</item>
+        <item>Buena adhesión y tolerancias coherentes para el uso esperado.</item>
+        <item>Acabado básico: limpieza y remate de bordes cuando aplica.</item>
+      </lista>
+    </bloque>
+  </bloques>
+
+  <valores titulo="Valores">
+    <valor titulo="Calidad">Cuidamos detalles y acabados para que el producto se vea pro.</valor>
+    <valor titulo="Personalización">Si se puede ajustar, lo ajustamos: nombre, color, tamaño.</valor>
+    <valor titulo="Funcionalidad">Diseños que sirven de verdad (no solo bonitos).</valor>
+  </valores>
+</nosotros>

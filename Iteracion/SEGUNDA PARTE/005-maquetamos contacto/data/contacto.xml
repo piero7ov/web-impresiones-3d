@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacto lang="es" version="1.0">
+  <hero>
+    <titulo>Contacto</titulo>
+    <subtitulo>Cuéntanos qué necesitas y te respondemos lo antes posible.</subtitulo>
+  </hero>
+
+  <canales titulo="Canales de atención">
+    <canal icon="✉️" label="Email" value="3dpierodev@gmail.com"/>
+    <canal icon="📍" label="Ubicación" value="Valencia, España" note=""/>
+    <canal icon="🕒" label="Horario" value="Lun–Vie · 10:00–18:00" note=""/>
+    <canal icon="📦" label="Pedidos" value="Producción 24–72h" note=""/>
+  </canales>
+
+  <form titulo="Escríbenos">
+    <hint>Cuéntanos qué necesitas y te respondemos lo antes posible.</hint>
+  </form>
+</contacto>
