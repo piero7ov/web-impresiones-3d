@@ -1,0 +1,12 @@
+[
+    {
+        "id": "cli_fb9e03410b",
+        "created_at": "2026-02-18T05:05:14+00:00",
+        "updated_at": "2026-02-18T05:05:14+00:00",
+        "nombre": "Piero",
+        "email": "piero7ov@gmail.com",
+        "telefono": "34567546",
+        "direccion": "Embarcadero 24 Pt 4",
+        "notas": "Que este bien empacado"
+    }
+]
