@@ -1,0 +1,42 @@
+[
+    {
+        "id": "cli_fb9e03410b",
+        "created_at": "2026-02-18T05:05:14+00:00",
+        "updated_at": "2026-02-18T05:05:14+00:00",
+        "nombre": "Piero",
+        "email": "piero7ov@gmail.com",
+        "telefono": "34567546",
+        "direccion": "Embarcadero 24 Pt 4",
+        "notas": "Que este bien empacado"
+    },
+    {
+        "id": "cli_ffce181c53",
+        "created_at": "2026-02-19T15:15:52+00:00",
+        "updated_at": "2026-02-19T15:15:52+00:00",
+        "nombre": "Andres Garcia",
+        "email": "andres@gmail.com",
+        "telefono": "345678",
+        "direccion": "Embarcadero 24 pt 5",
+        "notas": "Que el envio este bien empaquetado"
+    },
+    {
+        "id": "cli_624106b4bd",
+        "created_at": "2026-02-19T15:38:56+00:00",
+        "updated_at": "2026-02-19T15:38:56+00:00",
+        "nombre": "Alberto Garcia",
+        "email": "albertogarcia@gmail.com",
+        "telefono": "345678098",
+        "direccion": "Calle de Alberto",
+        "notas": "Nada"
+    },
+    {
+        "id": "cli_2e8288dd79",
+        "created_at": "2026-02-19T15:39:42+00:00",
+        "updated_at": "2026-02-19T15:39:42+00:00",
+        "nombre": "Maria Garcia",
+        "email": "mariag@gmail.com",
+        "telefono": "3456534213",
+        "direccion": "Calle de Maria",
+        "notas": "Nada"
+    }
+]
